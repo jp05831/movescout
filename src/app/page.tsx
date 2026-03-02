@@ -7,7 +7,7 @@ import {
   Home, 
   Trophy, 
   Target,
-  CloudLightning,
+  Truck,
   MessageSquare,
   Check,
   ArrowRight,
@@ -23,6 +23,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { AnimatedGridPattern } from '@/components/ui/animated-grid';
+import { TestimonialsSection } from '@/components/ui/testimonials';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -63,24 +64,6 @@ function BentoCard({
           <Icon className={`w-5 h-5 ${iconColor}`} />
         </div>
         <h3 className="text-lg font-semibold text-white mb-2">{title}</h3>
-        <p className="text-gray-400 text-sm leading-relaxed">{description}</p>
-      </div>
-    </motion.div>
-  );
-}
-
-// Timeline Step for Storm Section
-function TimelineStep({ number, title, description, isLast = false }: { number: number; title: string; description: string; isLast?: boolean }) {
-  return (
-    <motion.div variants={fadeInUp} className="flex gap-4">
-      <div className="flex flex-col items-center">
-        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center font-bold text-sm shadow-lg shadow-blue-600/30">
-          {number}
-        </div>
-        {!isLast && <div className="w-px h-full bg-gradient-to-b from-blue-500/50 to-transparent mt-2" />}
-      </div>
-      <div className="pb-8">
-        <h4 className="font-semibold text-white mb-1">{title}</h4>
         <p className="text-gray-400 text-sm leading-relaxed">{description}</p>
       </div>
     </motion.div>
@@ -129,7 +112,7 @@ export default function LandingPage() {
               
               <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold leading-[1.1] tracking-tight mb-6">
                 Automated SMS Marketing for{' '}
-                <span className="gradient-text">Moving Companies & Roofers</span>
+                <span className="gradient-text">Moving Companies</span>
               </h1>
               
               <h2 className="text-xl md:text-2xl text-blue-400 font-semibold mb-5">
@@ -138,8 +121,7 @@ export default function LandingPage() {
               
               <p className="text-gray-400 text-lg mb-8 leading-relaxed max-w-xl">
                 Reach motivated sellers and homeowners instantly with automated SMS outreach to fresh listings. 
-                Perfect for moving companies and roofing contractors. No manual work. No missed opportunities. 
-                Just qualified leads delivered to your phone.
+                No manual work. No missed opportunities. Just qualified leads delivered to your phone.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -193,10 +175,10 @@ export default function LandingPage() {
             className="text-center mb-14"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
-              Perfect for Moving Companies & Roofers
+              Built for Moving Companies
             </h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-              Whether you&apos;re booking moves or closing roofing jobs, reach homeowners the moment they list their property
+              Reach homeowners the moment they list their property — before your competition even knows about it
             </p>
           </motion.div>
           
@@ -237,13 +219,13 @@ export default function LandingPage() {
             <BentoCard 
               icon={TrendingUp}
               title="Higher Conversion"
-              description="SMS has a 98% open rate. Be the first company they hear from when they need your services."
+              description="SMS has a 98% open rate. Be the first company they hear from when they need moving services."
             />
             
             <BentoCard 
-              icon={Home}
-              title="For Movers & Roofers"
-              description="Selling a home means moving and often roof repairs. Target homeowners who need both services."
+              icon={Truck}
+              title="Built for Movers"
+              description="Every homeowner selling their property needs to move. Target them at the perfect moment."
             />
             
             <BentoCard 
@@ -285,68 +267,8 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Storm Tracking Section */}
-      <section className="py-24 px-6 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-600/5 to-transparent" />
-        
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-blue-600/10 border border-blue-500/20 rounded-xl flex items-center justify-center">
-                  <CloudLightning className="w-6 h-6 text-blue-400" />
-                </div>
-                <Badge variant="outline" className="border-blue-500/30 bg-blue-600/10 text-blue-300">
-                  For Roofing Contractors
-                </Badge>
-              </div>
-              
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
-                Automatically Text Homeowners After a Hail Storm
-              </h2>
-              
-              <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                Reach affected homeowners instantly with automated SMS outreach to storm-damaged properties. 
-                No manual work. No missed opportunities. Just qualified leads delivered to your phone.
-              </p>
-            </motion.div>
-            
-            {/* Right Timeline */}
-            <motion.div
-              variants={stagger}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="bg-gradient-to-br from-[#0c0c14] to-[#080810] border border-white/5 rounded-2xl p-8">
-                <TimelineStep 
-                  number={1}
-                  title="Storm detected"
-                  description="Our system monitors NOAA 24/7 for hail and wind events in your area."
-                />
-                <TimelineStep 
-                  number={2}
-                  title="Targeted lists built"
-                  description="We pull property records in the storm path and enrich them with verified mobile numbers."
-                />
-                <TimelineStep 
-                  number={3}
-                  title="Instant SMS outreach"
-                  description="Automated text messages are sent to affected homeowners offering your roofing services."
-                  isLast
-                />
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      {/* Testimonials Section */}
+      <TestimonialsSection />
 
       {/* Pricing Section */}
       <section id="pricing" className="py-24 px-6 relative">
@@ -454,7 +376,7 @@ export default function LandingPage() {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">Ready to Generate More Leads?</h2>
             <p className="text-gray-400 text-lg mb-8 max-w-xl mx-auto">
-              Join moving companies and roofing contractors already using MoveScout
+              Join hundreds of moving companies already using MoveScout to fill their schedules
             </p>
             <Button asChild size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-10 h-14 text-base font-semibold glow-blue-sm">
               <a href="/get-started">
