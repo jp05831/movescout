@@ -111,7 +111,7 @@ export default function LandingPage() {
               </Badge>
               
               <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold leading-[1.1] tracking-tight mb-6">
-                Automated SMS Marketing for{' '}
+                Automated SMS & Direct Mail for{' '}
                 <span className="gradient-text">Moving Companies</span>
               </h1>
               
@@ -120,7 +120,7 @@ export default function LandingPage() {
               </h2>
               
               <p className="text-gray-400 text-lg mb-8 leading-relaxed max-w-xl">
-                Reach motivated sellers and homeowners instantly with automated SMS outreach to fresh listings. 
+                Reach motivated sellers and homeowners instantly with automated SMS outreach and direct mail campaigns to fresh listings. 
                 No manual work. No missed opportunities. Just qualified leads delivered to your phone.
               </p>
               
