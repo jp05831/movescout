@@ -23,7 +23,6 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { AnimatedGridPattern } from '@/components/ui/animated-grid';
-import { TestimonialsSection } from '@/components/ui/testimonials';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -266,9 +265,6 @@ export default function LandingPage() {
           </motion.div>
         </div>
       </section>
-
-      {/* Testimonials Section */}
-      <TestimonialsSection />
 
       {/* Pricing Section */}
       <section id="pricing" className="py-24 px-6 relative">
