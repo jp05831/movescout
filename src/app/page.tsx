@@ -298,7 +298,7 @@ export default function LandingPage() {
                   </Badge>
                   <h3 className="text-2xl font-bold mb-3">City Dominator Plan</h3>
                   <div className="flex items-baseline justify-center gap-1">
-                    <span className="text-5xl md:text-6xl font-bold">$499</span>
+                    <span className="text-5xl md:text-6xl font-bold">$800</span>
                     <span className="text-gray-400 text-lg">/month</span>
                   </div>
                 </div>
@@ -346,7 +346,7 @@ export default function LandingPage() {
                   <strong className="text-white">Need more?</strong> Want multiple cities or an entire state with true exclusivity?
                 </p>
                 <p className="text-gray-400 text-sm">
-                  Custom Regional (<span className="text-blue-400 font-medium">$799/mo</span>) and State Dominator (<span className="text-blue-400 font-medium">$999/mo</span>) plans available
+                  Custom Regional (<span className="text-blue-400 font-medium">$1099/mo</span>) and State Dominator (<span className="text-blue-400 font-medium">$1300/mo</span>) plans available
                 </p>
                 <a href="mailto:info@movescout.net" className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 mt-4 text-sm font-medium transition-colors">
                   <Mail className="w-4 h-4" />
